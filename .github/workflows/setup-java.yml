@@ -9,18 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      #- name: Checkout
-      #  uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
       - name: Setup Java
         uses: oracle-actions/setup-java@v1
         with:
-          website: oracle.com
-          release: 17
-          version: latest
-          install: true
+          website: jdk.java.net
+          release: loom
 
-      - name: Test our JDK
+      - name: Test Installed JDK
         run: |
           pwd
           ls -la
