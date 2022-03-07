@@ -20,6 +20,8 @@ jobs:
           version: latest
           install: true
 
-#      - name: Setup
-#        run: |
-#          npm install
+      - name: Test JDK
+        run: |
+          pwd
+          ls -la
+          java src/dev/java/Hello.java
