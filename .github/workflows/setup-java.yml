@@ -1,16 +1,16 @@
-name: Setup Java and Test it!
+name: Install and Test a JDK
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  install-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      #- name: Checkout
+      #  uses: actions/checkout@v2
 
       - name: Setup Java
         uses: oracle-actions/setup-java@v1
@@ -20,7 +20,7 @@ jobs:
           version: latest
           install: true
 
-      - name: Test JDK
+      - name: Test our JDK
         run: |
           pwd
           ls -la
